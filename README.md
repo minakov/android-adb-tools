@@ -1,3 +1,8 @@
+android-adb-tools
+=================
+
+Helpful personal command for adb
+
 Usage: dbquery.sh
 -----------------
 
@@ -18,7 +23,7 @@ ru_RU
 ```
 
 Usage: preferences.sh
------------------
+---------------------
 
 ```
 $ preferences.sh
