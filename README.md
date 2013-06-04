@@ -16,3 +16,15 @@ locale
 ----------
 ru_RU     
 ```
+
+Usage: preferences.sh
+-----------------
+
+```
+$ preferences.sh
+
+{PACKAGE}_preferences.xml
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<map>
+</map>
+```
