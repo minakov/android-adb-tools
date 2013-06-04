@@ -1,5 +1,7 @@
 #!/bin/sh
-if [ -z "$ADB" ]; then ADB=adb; fi
+
+PACKAGE=
+DATABASE=
 
 if [ $# -ne 1 ]
  then
@@ -7,9 +9,7 @@ if [ $# -ne 1 ]
   exit 1
 fi;
 
-PACKAGE=
-DATABASE=
-
+if [ -z "$ADB" ]; then ADB=adb; fi
 $ADB -d shell "run-as $PACKAGE cat /data/data/$PACKAGE/databases/$DATABASE > /sdcard/${PACKAGE}_${DATABASE}"
 $ADB pull "/sdcard/${PACKAGE}_${DATABASE}" $HOME/"${PACKAGE}_${DATABASE}"
 $ADB -d shell "rm /sdcard/${PACKAGE}_${DATABASE}"
